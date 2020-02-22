@@ -1,5 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  main
+    section.main__container
+      .main__container--poster
+        img(src='/images/pablo-delivery.png')
+      .main__container--text
+        h1 Create Click-Worthy Links
+        h2 Build and protect your brand using powerful, recognizable short links.
+
+    section.shorten__container
+      form.shorten__container--form(action="/createurl", method="post")
+        input(type="text", name="longurl", placeholder="Your too long URL....")
+        input(type="submit", value="Shorten!")
+
+    footer
+      span &copy; 2020 Short Me!. All right reserved.

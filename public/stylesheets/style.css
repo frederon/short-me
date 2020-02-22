@@ -1,8 +1,115 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font: 14px 'Arvo', Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at 99% 0%, rgba(235, 235, 235, 0.03) 0%, rgba(235, 235, 235, 0.03) 50%, rgba(142, 142, 142, 0.03) 50%, rgba(142, 142, 142, 0.03) 100%),
+    radial-gradient(circle at 84% 89%, rgba(229, 229, 229, 0.03) 0%, rgba(229, 229, 229, 0.03) 50%, rgba(1, 1, 1, 0.03) 50%, rgba(1, 1, 1, 0.03) 100%),
+    radial-gradient(circle at 89% 20%, rgba(219, 219, 219, 0.03) 0%, rgba(219, 219, 219, 0.03) 50%, rgba(38, 38, 38, 0.03) 50%, rgba(38, 38, 38, 0.03) 100%),
+    radial-gradient(circle at 90% 0%, rgba(48, 48, 48, 0.03) 0%, rgba(48, 48, 48, 0.03) 50%, rgba(109, 109, 109, 0.03) 50%, rgba(109, 109, 109, 0.03) 100%),
+    linear-gradient(45deg, rgb(26, 53, 180), rgb(164, 129, 216));
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
 }
 
-a {
-  color: #00B7FF;
+.main__container,
+.shorten__container {
+  display: flex;
+  max-width: 85vw;
+  margin: 40px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 4px 7px 19px -10px rgba(0, 0, 0, 0.75);
+}
+
+.main__container--poster {
+  max-width: 50%;
+}
+
+.main__container--poster img {
+  width: 100%;
+}
+
+.main__container--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main__container--text h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.main__container--text h2 {
+  color: #56575b;
+}
+
+.shorten__container--form {
+  display: flex;
+  width: 100%;
+  height: 40px;
+}
+
+.shorten__container {
+  padding: 20px 40px;
+}
+
+.shorten__container--form input[type="text"] {
+  flex-grow: 4;
+  margin-right: 15px;
+  height: 100%;
+  border: 0;
+  padding: 0 15px;
+  font-size: 1.5em;
+}
+
+.shorten__container--form input[type="text"]:focus {
+  outline-width: 0;
+}
+
+.shorten__container--form input[type="submit"] {
+  border: 0;
+  background: linear-gradient(37deg, rgb(32, 218, 233), rgb(40, 21, 236));
+  height: 100%;
+  width: 200px;
+  color: #fff;
+  font-size: 1.3em;
+  border-radius: 5px;
+}
+
+footer span {
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+@media all and (max-width: 895px) {
+
+  .main__container,
+  .shorten__container--form {
+    flex-direction: column;
+  }
+
+  .shorten__container--form {
+    height: 80px;
+  }
+
+  .shorten__container--form input[type="text"] {
+    padding: 0;
+  }
+
+  .shorten__container--form input[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .main__container--poster {
+    max-width: 100%;
+  }
+
+  .main__container--text {
+    text-align: center;
+  }
 }
